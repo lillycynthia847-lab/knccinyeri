@@ -1,0 +1,442 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="KNCCI Nyeri Chapter Events — AGMs, workshops, networking forums, and training programmes for the Nyeri business community." />
+  <title>Events | KNCCI Nyeri Chapter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/events.css" />
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <a href="tel:+254712345678">+254 712 345 678</a>
+        <a href="mailto:nyeri@kenyachamber.or.ke">nyeri@kenyachamber.or.ke</a>
+        <span>Nyeri Town, Kenya</span>
+      </div>
+      <div class="top-bar-right">
+        <span>Mon – Fri &nbsp;|&nbsp; 8:00 AM – 5:00 PM</span>
+        <div class="top-socials">
+          <a href="#" class="tsoc" aria-label="Facebook">f</a>
+          <a href="#" class="tsoc" aria-label="Twitter">X</a>
+          <a href="#" class="tsoc" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo" id="logo">
+          <img src="Images/kncci.jpg" alt="KNCCI Nyeri Chapter Logo" class="logo-img" />
+          <div class="logo-label">
+            <span class="logo-label-main">KNCCI Nyeri</span>
+            <span class="logo-label-sub">Nyeri County Chapter</span>
+          </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li class="has-dropdown">
+            <a href="about.html" class="nav-link">About <span class="caret">▾</span></a>
+            <ul class="dropdown">
+              <li><a href="about.html#story">Our Story</a></li>
+              <li><a href="about.html#mvv">Mission & Vision</a></li>
+              <li><a href="about.html#leadership">Leadership</a></li>
+            </ul>
+          </li>
+          <li class="has-dropdown">
+            <a href="opportunities.html" class="nav-link">Opportunities <span class="caret">▾</span></a>
+            <ul class="dropdown">
+              <li><a href="opportunities.html#vendor">Vendor Opportunities</a></li>
+              <li><a href="opportunities.html#tenders">Government Tenders</a></li>
+              <li><a href="opportunities.html#jobs">Job Opportunities</a></li>
+              <li><a href="opportunities.html#grants">Grants</a></li>
+            </ul>
+          </li>
+          <li><a href="events.html" class="nav-link active">Events</a></li>
+          <li><a href="news.html" class="nav-link">News</a></li>
+          <li><a href="management.html" class="nav-link">Management</a></li>
+          <li><a href="#" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#" class="btn btn-primary nav-cta">Become a Member</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="ph-pattern"></div>
+    <div class="container ph-inner">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="bc-sep">›</span>
+        <span class="bc-current">Events</span>
+      </nav>
+      <h1 class="ph-title">Events & Programmes</h1>
+      <p class="ph-subtitle">AGMs, workshops, networking forums, and training programmes for the Nyeri business community</p>
+    </div>
+  </section>
+
+  <!-- FILTER TABS -->
+  <div class="ev-tabs-bar" id="evTabsBar">
+    <div class="container ev-tabs-inner">
+      <div class="ev-tabs">
+        <button class="ev-tab active" data-filter="all">All Events</button>
+        <button class="ev-tab" data-filter="agm">AGM</button>
+        <button class="ev-tab" data-filter="workshop">Workshop</button>
+        <button class="ev-tab" data-filter="networking">Networking</button>
+        <button class="ev-tab" data-filter="training">Training</button>
+        <button class="ev-tab" data-filter="conference">Conference</button>
+        <button class="ev-tab" data-filter="past">Past Events</button>
+      </div>
+      <div class="ev-view-toggle">
+        <button class="view-btn active" id="gridView" aria-label="Grid view" title="Grid view">&#9632;&#9632;</button>
+        <button class="view-btn" id="listView" aria-label="List view" title="List view">&#9644;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED EVENT -->
+  <div class="ev-featured-wrap" id="featuredWrap">
+    <div class="container">
+      <div class="ev-featured-card">
+        <div class="ev-featured-date">
+          <span class="efd-day">15</span>
+          <span class="efd-month">JUL</span>
+          <span class="efd-year">2026</span>
+        </div>
+        <div class="ev-featured-body">
+          <div class="ev-featured-top">
+            <span class="ev-badge ev-badge-agm">Annual General Meeting</span>
+            <span class="ev-status upcoming">Upcoming</span>
+          </div>
+          <h2 class="ev-featured-title">KNCCI Nyeri Chapter Annual General Meeting 2026</h2>
+          <p class="ev-featured-desc">Our flagship annual gathering where members review the chapter's performance, receive audited financial reports, elect leaders, and set the strategic direction for the coming year. All registered members are encouraged to attend.</p>
+          <div class="ev-featured-meta">
+            <div class="ev-meta-item">
+              <span class="ev-meta-label">Location</span>
+              <span class="ev-meta-value">Outspan Hotel, Nyeri</span>
+            </div>
+            <div class="ev-meta-item">
+              <span class="ev-meta-label">Time</span>
+              <span class="ev-meta-value">9:00 AM – 4:00 PM</span>
+            </div>
+            <div class="ev-meta-item">
+              <span class="ev-meta-label">Dress Code</span>
+              <span class="ev-meta-value">Business Formal</span>
+            </div>
+            <div class="ev-meta-item">
+              <span class="ev-meta-label">Entry</span>
+              <span class="ev-meta-value">Members Only</span>
+            </div>
+          </div>
+          <div class="ev-featured-actions">
+            <a href="#" class="btn btn-gold">Register Now</a>
+            <a href="#" class="btn btn-outline-dark">Download Agenda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- UPCOMING EVENTS GRID -->
+  <section class="section ev-section" id="evSection">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label" id="sectionLabel">Upcoming Events</span>
+        <h2 class="section-title" id="sectionTitle">Mark Your Calendar</h2>
+        <p class="section-sub" id="sectionSub">Register early — spaces are limited for most events</p>
+      </div>
+
+      <div class="ev-grid" id="evGrid">
+
+        <!-- AGM -->
+        <div class="ev-card" data-category="agm" data-status="upcoming">
+          <div class="ev-card-date">
+            <span class="ecd-day">15</span>
+            <span class="ecd-month">JUL</span>
+            <span class="ecd-year">2026</span>
+          </div>
+          <div class="ev-card-body">
+            <div class="ev-card-top">
+              <span class="ev-badge ev-badge-agm">AGM</span>
+              <span class="ev-status upcoming">Upcoming</span>
+            </div>
+            <h3>KNCCI Nyeri Chapter AGM 2026</h3>
+            <div class="ev-card-meta">
+              <span><b>Location:</b> Outspan Hotel, Nyeri</span>
+              <span><b>Time:</b> 9:00 AM – 4:00 PM</span>
+            </div>
+            <a href="#" class="btn btn-primary ev-register-btn">Register</a>
+          </div>
+        </div>
+
+        <!-- WORKSHOP -->
+        <div class="ev-card" data-category="workshop" data-status="upcoming">
+          <div class="ev-card-date">
+            <span class="ecd-day">22</span>
+            <span class="ecd-month">JUL</span>
+            <span class="ecd-year">2026</span>
+          </div>
+          <div class="ev-card-body">
+            <div class="ev-card-top">
+              <span class="ev-badge ev-badge-workshop">Workshop</span>
+              <span class="ev-status upcoming">Upcoming</span>
+            </div>
+            <h3>SME Finance & Credit Access Workshop</h3>
+            <div class="ev-card-meta">
+              <span><b>Location:</b> KNCCI Nyeri Offices</span>
+              <span><b>Time:</b> 10:00 AM – 1:00 PM</span>
+            </div>
+            <a href="#" class="btn btn-primary ev-register-btn">Register</a>
+          </div>
+        </div>
+
+        <!-- NETWORKING -->
+        <div class="ev-card" data-category="networking" data-status="upcoming">
+          <div class="ev-card-date">
+            <span class="ecd-day">05</span>
+            <span class="ecd-month">AUG</span>
+            <span class="ecd-year">2026</span>
+          </div>
+          <div class="ev-card-body">
+            <div class="ev-card-top">
+              <span class="ev-badge ev-badge-networking">Networking</span>
+              <span class="ev-status upcoming">Upcoming</span>
+            </div>
+            <h3>Nyeri Business Breakfast Forum</h3>
+            <div class="ev-card-meta">
+              <span><b>Location:</b> White Rhino Hotel, Nyeri</span>
+              <span><b>Time:</b> 7:30 AM – 10:00 AM</span>
+            </div>
+            <a href="#" class="btn btn-primary ev-register-btn">Register</a>
+          </div>
+        </div>
+
+        <!-- TRAINING -->
+        <div class="ev-card" data-category="training" data-status="upcoming">
+          <div class="ev-card-date">
+            <span class="ecd-day">19</span>
+            <span class="ecd-month">AUG</span>
+            <span class="ecd-year">2026</span>
+          </div>
+          <div class="ev-card-body">
+            <div class="ev-card-top">
+              <span class="ev-badge ev-badge-training">Training</span>
+              <span class="ev-status upcoming">Upcoming</span>
+            </div>
+            <h3>Digital Marketing for SMEs — 2-Day Bootcamp</h3>
+            <div class="ev-card-meta">
+              <span><b>Location:</b> Nyeri National Polytechnic</span>
+              <span><b>Time:</b> 8:30 AM – 4:30 PM</span>
+            </div>
+            <a href="#" class="btn btn-primary ev-register-btn">Register</a>
+          </div>
+        </div>
+
+        <!-- CONFERENCE -->
+        <div class="ev-card" data-category="conference" data-status="upcoming">
+          <div class="ev-card-date">
+            <span class="ecd-day">10</span>
+            <span class="ecd-month">SEP</span>
+            <span class="ecd-year">2026</span>
+          </div>
+          <div class="ev-card-body">
+            <div class="ev-card-top">
+              <span class="ev-badge ev-badge-conference">Conference</span>
+              <span class="ev-status upcoming">Upcoming</span>
+            </div>
+            <h3>Nyeri County Investment Conference 2026</h3>
+            <div class="ev-card-meta">
+              <span><b>Location:</b> Batian Resort, Nyeri</span>
+              <span><b>Time:</b> 8:00 AM – 6:00 PM</span>
+            </div>
+            <a href="#" class="btn btn-primary ev-register-btn">Register</a>
+          </div>
+        </div>
+
+        <!-- WORKSHOP 2 -->
+        <div class="ev-card" data-category="workshop" data-status="upcoming">
+          <div class="ev-card-date">
+            <span class="ecd-day">25</span>
+            <span class="ecd-month">SEP</span>
+            <span class="ecd-year">2026</span>
+          </div>
+          <div class="ev-card-body">
+            <div class="ev-card-top">
+              <span class="ev-badge ev-badge-workshop">Workshop</span>
+              <span class="ev-status upcoming">Upcoming</span>
+            </div>
+            <h3>Export Readiness & Trade Documentation Workshop</h3>
+            <div class="ev-card-meta">
+              <span><b>Location:</b> KNCCI Nyeri Offices</span>
+              <span><b>Time:</b> 9:00 AM – 1:00 PM</span>
+            </div>
+            <a href="#" class="btn btn-primary ev-register-btn">Register</a>
+          </div>
+        </div>
+
+        <!-- PAST EVENTS -->
+        <div class="ev-card" data-category="agm" data-status="past">
+          <div class="ev-card-date past-date">
+            <span class="ecd-day">20</span>
+            <span class="ecd-month">JUL</span>
+            <span class="ecd-year">2025</span>
+          </div>
+          <div class="ev-card-body">
+            <div class="ev-card-top">
+              <span class="ev-badge ev-badge-agm">AGM</span>
+              <span class="ev-status past">Past</span>
+            </div>
+            <h3>KNCCI Nyeri Chapter AGM 2025</h3>
+            <div class="ev-card-meta">
+              <span><b>Location:</b> Outspan Hotel, Nyeri</span>
+              <span><b>Attendance:</b> 180 Members</span>
+            </div>
+            <a href="#" class="btn btn-outline-dark ev-register-btn">View Report</a>
+          </div>
+        </div>
+
+        <div class="ev-card" data-category="networking" data-status="past">
+          <div class="ev-card-date past-date">
+            <span class="ecd-day">14</span>
+            <span class="ecd-month">MAR</span>
+            <span class="ecd-year">2025</span>
+          </div>
+          <div class="ev-card-body">
+            <div class="ev-card-top">
+              <span class="ev-badge ev-badge-networking">Networking</span>
+              <span class="ev-status past">Past</span>
+            </div>
+            <h3>Business Leaders Dinner — Q1 2025</h3>
+            <div class="ev-card-meta">
+              <span><b>Location:</b> Green Hills Hotel, Nyeri</span>
+              <span><b>Attendance:</b> 95 Guests</span>
+            </div>
+            <a href="#" class="btn btn-outline-dark ev-register-btn">View Report</a>
+          </div>
+        </div>
+
+        <div class="ev-card" data-category="training" data-status="past">
+          <div class="ev-card-date past-date">
+            <span class="ecd-day">08</span>
+            <span class="ecd-month">FEB</span>
+            <span class="ecd-year">2025</span>
+          </div>
+          <div class="ev-card-body">
+            <div class="ev-card-top">
+              <span class="ev-badge ev-badge-training">Training</span>
+              <span class="ev-status past">Past</span>
+            </div>
+            <h3>Tax Compliance Clinic — KRA Partnership</h3>
+            <div class="ev-card-meta">
+              <span><b>Location:</b> KNCCI Nyeri Offices</span>
+              <span><b>Attendance:</b> 62 SMEs</span>
+            </div>
+            <a href="#" class="btn btn-outline-dark ev-register-btn">View Report</a>
+          </div>
+        </div>
+
+      </div><!-- /ev-grid -->
+
+      <!-- Empty state -->
+      <div class="ev-empty" id="evEmpty" style="display:none;">
+        <div class="ev-empty-icon">—</div>
+        <h3>No events in this category</h3>
+        <p>Check back soon or view all upcoming events.</p>
+        <button class="btn btn-primary" onclick="resetFilter()">View All Events</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div class="cta-text">
+        <h2>Never Miss an Event</h2>
+        <p>KNCCI Nyeri members receive priority invitations, early-bird access, and discounted registration for all chapter events.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-gold">Become a Member</a>
+        <a href="#" class="btn btn-outline-white">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="footer-logo">
+          <img src="Images/kncci.jpg" alt="KNCCI Nyeri Chapter Logo" class="logo-img logo-img-footer" />
+          <div class="logo-label">
+            <span class="logo-label-main">KNCCI Nyeri</span>
+            <span class="logo-label-sub">Nyeri County Chapter</span>
+          </div>
+        </a>
+        <p class="footer-tagline">The official voice of business in Nyeri County. Advocating for growth, prosperity, and a thriving local economy.</p>
+        <div class="footer-socials">
+          <a href="#" class="fsoc" aria-label="Facebook">f</a>
+          <a href="#" class="fsoc" aria-label="Twitter">X</a>
+          <a href="#" class="fsoc" aria-label="LinkedIn">in</a>
+          <a href="#" class="fsoc" aria-label="YouTube">▶</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="opportunities.html">Opportunities</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Management</h4>
+        <ul class="footer-links">
+          <li><a href="management.html#board">Board of Directors</a></li>
+          <li><a href="management.html#subcounty">Sub-County Heads</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><span class="fc-label">Location</span> Nyeri Town, Nyeri County, Kenya</li>
+          <li><span class="fc-label">Tel</span> <a href="tel:+254712345678">+254 712 345 678</a></li>
+          <li><span class="fc-label">Email</span> <a href="mailto:nyeri@kenyachamber.or.ke">nyeri@kenyachamber.or.ke</a></li>
+          <li><span class="fc-label">Hours</span> Mon – Fri: 8:00 AM – 5:00 PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2026 KNCCI Nyeri Chapter. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+/* ===========================
+   KNCCI NYERI — ABOUT.CSS
+   =========================== */
+
+/* ===== PAGE HERO ===== */
+.page-hero {
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0 72px;
+}
+.ph-pattern {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 50% 80% at 90% 50%, rgba(26,92,56,.2) 0%, transparent 70%),
+    radial-gradient(ellipse 30% 60% at 5% 80%, rgba(201,165,53,.07) 0%, transparent 60%);
+}
+.ph-pattern::after {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+.ph-inner {
+  position: relative; z-index: 2;
+}
+.breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  font-size: .82rem; margin-bottom: 20px;
+}
+.breadcrumb a { color: rgba(255,255,255,.55); transition: color .2s; }
+.breadcrumb a:hover { color: var(--gold); }
+.bc-sep { color: rgba(255,255,255,.3); }
+.bc-current { color: var(--gold); font-weight: 600; }
+.ph-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--white); margin-bottom: 14px; line-height: 1.2;
+}
+.ph-subtitle {
+  color: rgba(255,255,255,.65);
+  font-size: 1.05rem; max-width: 560px;
+}
+
+/* ===== OUR STORY ===== */
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+.story-content { display: flex; flex-direction: column; gap: 18px; }
+.story-content .section-title { margin-bottom: 4px; }
+.story-content p { color: var(--muted); line-height: 1.85; }
+
+/* Timeline */
+.story-timeline { display: flex; flex-direction: column; gap: 0; position: relative; }
+.story-timeline::before {
+  content: '';
+  position: absolute;
+  left: 14px; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--green), var(--gold));
+}
+.tl-item {
+  display: flex; gap: 24px; align-items: flex-start;
+  padding-bottom: 32px; position: relative;
+}
+.tl-item:last-child { padding-bottom: 0; }
+.tl-dot {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--white); border: 3px solid var(--green);
+  flex-shrink: 0; z-index: 1; margin-top: 2px;
+  display: flex; align-items: center; justify-content: center;
+}
+.tl-dot-active {
+  background: var(--gold); border-color: var(--gold);
+}
+.tl-dot-active::after {
+  content: ''; width: 10px; height: 10px; border-radius: 50%;
+  background: var(--navy);
+}
+.tl-body { flex: 1; }
+.tl-year {
+  display: inline-block;
+  background: rgba(26,92,56,.1); color: var(--green);
+  font-size: .72rem; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; padding: 3px 10px; border-radius: 50px;
+  margin-bottom: 6px;
+}
+.tl-item-current .tl-year {
+  background: rgba(201,165,53,.15); color: var(--gold);
+}
+.tl-body h4 { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
+.tl-body p  { color: var(--muted); font-size: .88rem; line-height: 1.65; }
+
+/* ===== MISSION VISION VALUES ===== */
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.mvv-card {
+  border-radius: 16px; padding: 40px 32px;
+  display: flex; flex-direction: column; gap: 16px;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.mvv-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(12,30,53,.12); }
+.mvv-mission { background: var(--navy); }
+.mvv-vision  { background: var(--green); }
+.mvv-values  { background: var(--white); border: 2px solid var(--border); }
+.mvv-icon { font-size: 2.4rem; }
+.mvv-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; font-weight: 700;
+}
+.mvv-mission h3, .mvv-mission p { color: var(--white); }
+.mvv-vision h3, .mvv-vision p   { color: var(--white); }
+.mvv-mission p, .mvv-vision p   { color: rgba(255,255,255,.8); line-height: 1.75; font-size: .95rem; }
+.mvv-values h3 { color: var(--navy); }
+
+/* Values list */
+.values-list { display: flex; flex-direction: column; gap: 12px; }
+.values-list li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: .92rem; font-weight: 500; color: var(--text);
+}
+.vl-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--gold); flex-shrink: 0;
+}
+
+/* ===== STRATEGIC PILLARS ===== */
+.pillars { background: var(--navy); }
+.pillars .section-label { color: var(--gold); }
+.pillars .section-title { color: var(--white); }
+.pillars .section-sub   { color: rgba(255,255,255,.6); }
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.pillar-card {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 14px; padding: 36px 24px;
+  display: flex; flex-direction: column; gap: 14px;
+  transition: all .3s ease; position: relative; overflow: hidden;
+}
+.pillar-card::before {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--green), var(--gold));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .3s ease;
+}
+.pillar-card:hover { background: rgba(255,255,255,.09); transform: translateY(-4px); }
+.pillar-card:hover::before { transform: scaleX(1); }
+.pillar-num {
+  font-size: .75rem; font-weight: 700; color: var(--gold);
+  letter-spacing: 2px; text-transform: uppercase;
+}
+.pillar-icon-lg { font-size: 2.2rem; }
+.pillar-card h3 { color: var(--white); font-size: 1.05rem; font-weight: 700; }
+.pillar-card p  { color: rgba(255,255,255,.6); font-size: .88rem; line-height: 1.7; }
+
+/* ===== LEADERSHIP ===== */
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.leader-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px; overflow: hidden;
+  transition: all .3s ease;
+  display: flex; flex-direction: column;
+}
+.leader-card:hover { box-shadow: 0 8px 32px rgba(12,30,53,.12); transform: translateY(-4px); }
+.leader-featured {
+  grid-column: span 1;
+  border-top: 4px solid var(--gold);
+}
+.leader-photo {
+  background: linear-gradient(135deg, var(--navy), var(--green));
+  height: 180px;
+  display: flex; align-items: center; justify-content: center;
+}
+.leader-featured .leader-photo { height: 220px; }
+.leader-initials {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem; font-weight: 700;
+  color: rgba(255,255,255,.2);
+  letter-spacing: 2px;
+}
+.leader-info { padding: 24px; display: flex; flex-direction: column; gap: 8px; }
+.leader-info h3 {
+  font-size: .72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1.5px; color: var(--green);
+}
+.leader-featured .leader-info h3 { color: var(--gold); }
+.leader-name { font-size: 1.05rem; font-weight: 700; color: var(--navy); }
+.leader-bio  { font-size: .85rem; color: var(--muted); line-height: 1.65; flex: 1; }
+.leader-socials { display: flex; gap: 8px; margin-top: 4px; }
+.leader-socials a {
+  width: 30px; height: 30px; border-radius: 50%;
+  background: var(--light); color: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .75rem; font-weight: 700; transition: all .2s;
+}
+.leader-socials a:hover { background: var(--navy); color: var(--white); }
+.leadership-note {
+  text-align: center; margin-top: 32px;
+  color: var(--muted); font-size: .82rem; font-style: italic;
+}
+
+/* ===== AFFILIATIONS ===== */
+.affiliations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.affil-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px; padding: 32px 24px;
+  text-align: center;
+  transition: all .3s ease;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+.affil-card:hover { border-color: var(--green); box-shadow: 0 6px 24px rgba(12,30,53,.09); transform: translateY(-4px); }
+.affil-icon { font-size: 2.4rem; }
+.affil-card h4 { font-size: 1rem; font-weight: 700; color: var(--navy); }
+.affil-card p  { color: var(--muted); font-size: .85rem; line-height: 1.6; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .story-grid    { grid-template-columns: 1fr; gap: 48px; }
+  .mvv-grid      { grid-template-columns: 1fr; }
+  .pillars-grid  { grid-template-columns: repeat(2, 1fr); }
+  .leadership-grid  { grid-template-columns: repeat(2, 1fr); }
+  .affiliations-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .pillars-grid     { grid-template-columns: 1fr; }
+  .leadership-grid  { grid-template-columns: 1fr; }
+  .affiliations-grid{ grid-template-columns: 1fr; }
+  .ph-title { font-size: 1.8rem; }
+}

@@ -1,0 +1,183 @@
+/* ===========================
+   KNCCI NYERI — MANAGEMENT.CSS
+   =========================== */
+
+/* ── SECTION WRAPPER ── */
+.mgmt-section { padding-bottom: 72px; }
+.mgmt-section.bg-light { background: var(--light); }
+
+.mgmt-section-header {
+  display: flex; gap: 48px; align-items: flex-start;
+  margin-bottom: 48px;
+}
+.mgmt-label-col { max-width: 680px; }
+.mgmt-label-col .section-label { margin-bottom: 6px; }
+.mgmt-label-col .section-title { margin-bottom: 16px; }
+.mgmt-intro {
+  color: var(--muted); font-size: .95rem; line-height: 1.8;
+}
+
+/* ── BOARD GRID ── */
+.mgmt-board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* Featured card spans full row on its own */
+.mgmt-card-featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(12,30,53,.1);
+}
+
+/* Standard card */
+.mgmt-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 16px; overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: all .3s ease;
+}
+.mgmt-card:not(.mgmt-card-featured):hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(12,30,53,.1);
+  border-color: transparent;
+}
+
+/* Photo block */
+.mgmt-photo {
+  background: linear-gradient(145deg, var(--navy) 0%, var(--green) 100%);
+  min-height: 320px;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.mgmt-photo-sm { min-height: 140px; }
+.mgmt-photo-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(12,30,53,.5), transparent);
+}
+
+.mgmt-initials {
+  width: 80px; height: 80px; border-radius: 50%;
+  background: rgba(255,255,255,.15);
+  border: 2px solid rgba(255,255,255,.25);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem; font-weight: 700;
+  color: rgba(255,255,255,.8);
+  letter-spacing: 2px;
+}
+.mgmt-photo-sm .mgmt-initials {
+  width: 56px; height: 56px; font-size: 1.1rem;
+}
+
+/* Info block */
+.mgmt-info { padding: 32px; display: flex; flex-direction: column; gap: 12px; }
+.mgmt-card-featured .mgmt-info { justify-content: center; }
+
+.mgmt-role {
+  display: inline-block;
+  font-size: .68rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 2px; color: var(--green);
+}
+.mgmt-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem; color: var(--navy); font-weight: 600;
+}
+.mgmt-card-featured .mgmt-name { font-size: 1.6rem; }
+
+.mgmt-bio {
+  color: var(--muted); font-size: .9rem; line-height: 1.75; flex: 1;
+}
+.mgmt-contacts { display: flex; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
+.mgmt-contact-btn {
+  padding: 8px 18px; border: 1.5px solid var(--border);
+  border-radius: 50px; font-size: .8rem; font-weight: 600;
+  color: var(--navy); transition: all .2s;
+}
+.mgmt-contact-btn:hover { border-color: var(--green); color: var(--green); }
+
+/* Note */
+.mgmt-note {
+  margin-top: 32px; text-align: center;
+  font-size: .82rem; color: var(--muted); font-style: italic;
+}
+
+/* Divider */
+.mgmt-section-divider { background: var(--white); padding: 0; }
+.mgmt-divider-line {
+  height: 1px; background: var(--border);
+  margin: 0;
+}
+
+/* ── SUB-COUNTY GRID ── */
+.mgmt-subcounty-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.sc-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+  transition: all .3s ease;
+}
+.sc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(12,30,53,.1);
+  border-color: transparent;
+}
+.sc-card-header {
+  background: linear-gradient(135deg, var(--navy), var(--green));
+  padding: 28px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.sc-initials {
+  width: 52px; height: 52px; border-radius: 50%;
+  background: rgba(255,255,255,.15);
+  border: 2px solid rgba(255,255,255,.2);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem; font-weight: 700;
+  color: rgba(255,255,255,.9); letter-spacing: 1px;
+}
+.sc-county-badge {
+  font-size: .7rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 1.5px; color: var(--gold);
+  background: rgba(201,165,53,.15); border: 1px solid rgba(201,165,53,.3);
+  padding: 4px 12px; border-radius: 50px;
+}
+
+.sc-body {
+  padding: 24px; display: flex; flex-direction: column; gap: 8px;
+}
+.sc-body .mgmt-role { margin-bottom: 2px; }
+.sc-body .mgmt-name { font-size: 1rem; }
+.sc-area { font-size: .82rem; color: var(--muted); font-weight: 500; }
+.sc-contact {
+  display: inline-block; margin-top: 8px;
+  padding: 8px 20px; border: 1.5px solid var(--border);
+  border-radius: 50px; font-size: .8rem; font-weight: 600;
+  color: var(--navy); transition: all .2s; align-self: flex-start;
+}
+.sc-contact:hover { border-color: var(--green); color: var(--green); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .mgmt-board-grid     { grid-template-columns: repeat(2, 1fr); }
+  .mgmt-subcounty-grid { grid-template-columns: repeat(2, 1fr); }
+  .mgmt-card-featured  { grid-column: 1 / -1; grid-template-columns: 240px 1fr; }
+}
+@media (max-width: 768px) {
+  .mgmt-board-grid     { grid-template-columns: 1fr; }
+  .mgmt-subcounty-grid { grid-template-columns: 1fr; }
+  .mgmt-card-featured  { grid-template-columns: 1fr; }
+  .mgmt-photo          { min-height: 200px; }
+  .mgmt-info           { padding: 24px; }
+  .mgmt-section-header { flex-direction: column; }
+}

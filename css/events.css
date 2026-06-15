@@ -1,0 +1,196 @@
+/* ===========================
+   KNCCI NYERI — EVENTS.CSS
+   =========================== */
+
+/* ── TAB FILTER BAR ── */
+.ev-tabs-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 72px; z-index: 90;
+  box-shadow: 0 2px 12px rgba(12,30,53,.06);
+}
+.ev-tabs-inner {
+  display: flex; align-items: center;
+  justify-content: space-between; gap: 16px;
+  padding: 10px 0;
+}
+.ev-tabs {
+  display: flex; gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.ev-tabs::-webkit-scrollbar { display: none; }
+.ev-tab {
+  flex-shrink: 0;
+  padding: 9px 20px; border-radius: 50px;
+  border: 1.5px solid var(--border);
+  background: transparent; font-size: .88rem;
+  font-weight: 600; color: var(--muted);
+  cursor: pointer; transition: all .25s ease;
+  white-space: nowrap; font-family: 'Inter', sans-serif;
+}
+.ev-tab:hover  { border-color: var(--green); color: var(--green); }
+.ev-tab.active { background: var(--navy); border-color: var(--navy); color: var(--white); }
+
+/* View toggle */
+.ev-view-toggle { display: flex; gap: 6px; flex-shrink: 0; }
+.view-btn {
+  width: 34px; height: 34px; border-radius: 8px;
+  border: 1.5px solid var(--border); background: transparent;
+  color: var(--muted); cursor: pointer; font-size: .8rem;
+  transition: all .2s; display: flex; align-items: center; justify-content: center;
+}
+.view-btn.active { background: var(--navy); border-color: var(--navy); color: var(--white); }
+
+/* ── FEATURED EVENT ── */
+.ev-featured-wrap {
+  background: var(--light);
+  padding: 48px 0 0;
+}
+.ev-featured-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px; overflow: hidden;
+  display: grid; grid-template-columns: 200px 1fr;
+  box-shadow: 0 8px 32px rgba(12,30,53,.08);
+}
+.ev-featured-date {
+  background: linear-gradient(160deg, var(--navy) 0%, var(--green) 100%);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 40px 24px; gap: 4px;
+}
+.efd-day   { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 700; color: var(--white); line-height: 1; }
+.efd-month { font-size: .85rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); }
+.efd-year  { font-size: .75rem; color: rgba(255,255,255,.5); margin-top: 4px; }
+
+.ev-featured-body { padding: 40px 48px; }
+.ev-featured-top  { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+.ev-featured-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--navy); line-height: 1.3; margin-bottom: 14px;
+}
+.ev-featured-desc {
+  color: var(--muted); line-height: 1.8; margin-bottom: 28px;
+  max-width: 680px; font-size: .95rem;
+}
+.ev-featured-meta {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 20px; margin-bottom: 32px;
+  padding: 24px; background: var(--light);
+  border-radius: 12px;
+}
+.ev-meta-item { display: flex; flex-direction: column; gap: 4px; }
+.ev-meta-label { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); }
+.ev-meta-value { font-size: .92rem; font-weight: 600; color: var(--navy); }
+.ev-featured-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ── STATUS BADGES ── */
+.ev-status {
+  font-size: .68rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; padding: 4px 10px; border-radius: 50px;
+}
+.ev-status.upcoming { background: rgba(26,92,56,.1); color: var(--green); }
+.ev-status.past     { background: rgba(107,124,147,.12); color: var(--muted); }
+
+/* ── CATEGORY BADGES ── */
+.ev-badge {
+  font-size: .68rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; padding: 4px 10px; border-radius: 50px;
+}
+.ev-badge-agm        { background: rgba(201,165,53,.15); color: #a07c18; }
+.ev-badge-workshop   { background: rgba(12,30,53,.08);   color: var(--navy); }
+.ev-badge-networking { background: rgba(26,92,56,.1);    color: var(--green); }
+.ev-badge-training   { background: rgba(59,130,246,.1);  color: #2563eb; }
+.ev-badge-conference { background: rgba(139,92,246,.1);  color: #7c3aed; }
+
+/* ── EVENTS SECTION ── */
+.ev-section { background: var(--light); padding-top: 48px; }
+
+/* ── GRID VIEW ── */
+.ev-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.ev-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px; overflow: hidden;
+  display: flex; flex-direction: row;
+  transition: all .3s ease;
+}
+.ev-card:hover {
+  box-shadow: 0 8px 28px rgba(12,30,53,.10);
+  transform: translateY(-4px);
+  border-color: transparent;
+}
+.ev-card-date {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  background: var(--navy); color: var(--white);
+  min-width: 72px; padding: 16px 10px; flex-shrink: 0;
+  gap: 2px;
+}
+.ev-card-date.past-date { background: var(--muted); }
+.ecd-day   { font-family: 'Playfair Display', serif; font-size: 1.7rem; font-weight: 700; line-height: 1; }
+.ecd-month { font-size: .62rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+.ecd-year  { font-size: .58rem; color: rgba(255,255,255,.5); }
+
+.ev-card-body { padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.ev-card-top  { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.ev-card-body h3 { font-size: .95rem; font-weight: 700; color: var(--navy); line-height: 1.4; }
+.ev-card-meta { display: flex; flex-direction: column; gap: 3px; }
+.ev-card-meta span { font-size: .8rem; color: var(--muted); }
+.ev-register-btn { margin-top: auto; align-self: flex-start; padding: 8px 16px; font-size: .8rem; }
+
+/* ── LIST VIEW ── */
+.ev-grid.list-view {
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.ev-grid.list-view .ev-card {
+  flex-direction: row;
+  align-items: center;
+}
+.ev-grid.list-view .ev-card-body {
+  flex-direction: row; align-items: center;
+  gap: 20px; flex-wrap: wrap;
+}
+.ev-grid.list-view .ev-card-body h3 { flex: 1; min-width: 200px; }
+.ev-grid.list-view .ev-card-meta { flex-direction: row; gap: 20px; }
+.ev-grid.list-view .ev-register-btn { margin-top: 0; flex-shrink: 0; }
+
+/* ── EMPTY STATE ── */
+.ev-empty {
+  text-align: center; padding: 80px 24px;
+}
+.ev-empty-icon {
+  font-size: 3rem; margin-bottom: 16px;
+  color: var(--muted);
+}
+.ev-empty h3 { font-size: 1.3rem; color: var(--navy); margin-bottom: 8px; }
+.ev-empty p  { color: var(--muted); margin-bottom: 24px; }
+
+/* ── HIDDEN ── */
+.ev-card.hidden { display: none; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .ev-grid { grid-template-columns: repeat(2, 1fr); }
+  .ev-featured-meta { grid-template-columns: repeat(2, 1fr); }
+  .ev-featured-card { grid-template-columns: 160px 1fr; }
+}
+@media (max-width: 768px) {
+  .ev-tabs-bar { top: 64px; }
+  .ev-grid { grid-template-columns: 1fr; }
+  .ev-featured-card { grid-template-columns: 1fr; }
+  .ev-featured-date { flex-direction: row; gap: 12px; padding: 24px; justify-content: flex-start; }
+  .ev-featured-body { padding: 24px; }
+  .ev-featured-meta { grid-template-columns: repeat(2, 1fr); }
+  .ev-view-toggle { display: none; }
+}
+@media (max-width: 480px) {
+  .ev-featured-meta { grid-template-columns: 1fr; }
+}
