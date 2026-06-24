@@ -17,3 +17,6 @@ $RECYCLE.BIN/
 *.njsproj
 *.sln
 *.sw?
+
+# Admin panel has its own repo (kncciadmin2)
+admin/
